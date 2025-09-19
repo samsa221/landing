@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, User, Calendar, CheckCircle, Clock, Zap,Phone, Youtube, Twitter, Instagram } from 'lucide-react';
 
 function App() {
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', email: '',whatsapp:'' });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Replace with your own Formspree endpoint
