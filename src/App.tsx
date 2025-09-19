@@ -58,7 +58,7 @@ function App() {
             </div>
             
             <p className="text-xl text-gray-400 leading-relaxed max-w-lg">
-              Our system helps coaches, consultants, and service providers book clients 24/7—no manual scheduling, no back-and-forth emails.
+              Our system helps coaches, consultants,dentists and service providers book clients 24/7—no manual scheduling, no back-and-forth emails.
             </p>
 
             {/* Email Form */}
@@ -125,7 +125,7 @@ function App() {
               <div className="relative bg-gradient-to-b from-gray-800 to-gray-900 p-8 rounded-3xl border border-gray-700 shadow-2xl transform hover:scale-105 transition-transform duration-500">
                 <div className="w-64 h-80 bg-gradient-to-b from-amber-50 to-amber-100 rounded-2xl shadow-inner flex flex-col items-center justify-center space-y-4">
                   <Calendar className="w-16 h-16 text-amber-500" />
-                  <p className="text-lg font-semibold text-gray-800">Smart Booking Dashboard</p>
+                  <p className="text-lg font-semibold text-gray-800">Smart Booking Agents</p>
                   <p className="text-gray-600 text-sm text-center">See your appointments, reschedule with one click, and sync with Google Calendar.</p>
                 </div>
                 <p className="text-center mt-4 text-amber-400 font-medium">Your Automated Scheduler</p>
