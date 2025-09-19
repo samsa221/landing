@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, User, Calendar, CheckCircle, Clock, Zap, Youtube, Twitter, Instagram } from 'lucide-react';
+import { Mail, User, Calendar, CheckCircle, Clock, Zap,Phone, Youtube, Twitter, Instagram } from 'lucide-react';
 
 function App() {
   const [formData, setFormData] = useState({ name: '', email: '' });
