@@ -22,11 +22,6 @@ function App() {
 
       if (response.ok) {
         setIsSubmitted(true);
-
-        // Redirect to a thank-you page after 2s
-        setTimeout(() => {
-          window.location.href = "/thank-you"; 
-        }, 2000);
       } else {
         alert("Something went wrong. Please try again.");
       }
