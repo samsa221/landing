@@ -76,7 +76,7 @@ function App() {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-green-400 font-medium">
-                    Thank you! Check your email for access.
+                    Thank you! We will get back to you.
                   </p>
                 </div>
               ) : (
