@@ -187,7 +187,8 @@ function App() {
       <footer className="py-16 px-6 bg-black border-t border-gray-800">
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-8">
-            <div>
+            <div> 
+              <h3 className="text-2xl font-bold text-amber-400 mb-2">SmartScheduler</h3>
               <p className="text-gray-400">Automating Appointments, Growing Businesses</p>
             </div>
             
