@@ -67,7 +67,7 @@ function App() {
                 Try It Free
               </h3>
               <p className="text-amber-400 text-center mb-6 font-medium">
-                Get Instant Access to the Demo
+                Sign up to Get Access to Live Webinar
               </p>
               
               {isSubmitted ? (
