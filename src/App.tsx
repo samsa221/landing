@@ -111,7 +111,7 @@ function App() {
                     <input
                       type="tel"
                       name="whatsapp"
-                      placeholder="WhatsApp number (e.g. +233 541234567)"
+                      placeholder="WhatsApp number"
                       value={formData.whatsapp}
                       onChange={handleInputChange}
                       required
