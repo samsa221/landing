@@ -106,7 +106,19 @@ function App() {
                       className="w-full pl-12 pr-4 py-4 bg-gray-900 border border-gray-600 rounded-xl focus:outline-none focus:border-amber-400 transition-colors text-white placeholder-gray-400"
                     />
                   </div>
-                  
+                  <div className="relative">
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                      type="tel"
+                      name="whatsapp"
+                      placeholder="WhatsApp number (e.g. +233 541234567)"
+                      value={formData.whatsapp}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full pl-12 pr-4 py-4 bg-gray-900 border border-gray-600 rounded-xl focus:border-amber-400 text-white"
+                    />
+                  </div>
+
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-black font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 text-lg"
