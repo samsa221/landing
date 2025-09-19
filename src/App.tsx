@@ -5,11 +5,35 @@ function App() {
   const [formData, setFormData] = useState({ name: '', email: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Replace with your own Formspree endpoint
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mwpngvbw";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+
+        // Redirect to a thank-you page after 2s
+        setTimeout(() => {
+          window.location.href = "/thank-you"; 
+        }, 2000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Error submitting form. Please check your connection.");
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +72,7 @@ function App() {
                 Try It Free
               </h3>
               <p className="text-amber-400 text-center mb-6 font-medium">
-                Sign up for access to live webinar
+                Get Instant Access to the Demo
               </p>
               
               {isSubmitted ? (
@@ -56,9 +80,11 @@ function App() {
                   <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-green-400 font-medium">Thank you! Check your email for access.</p>
+                  <p className="text-green-400 font-medium">
+                    Thank you! Redirecting...
+                  </p>
                 </div>
-              ) :(
+              ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="relative">
                     <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
